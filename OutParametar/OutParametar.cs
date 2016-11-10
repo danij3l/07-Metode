@@ -4,8 +4,7 @@ namespace Vsite.CSharp
 {
     public class OutParametar
     {
-        // TODO: Dodati parametru metode modifikator out te promijeniti metodu PozivInicijalizacijeOutParametrom tako da se može prevesti i izvesti.
-        static void InicijalizirajBrojNaDeset(int x)
+        static void InicijalizirajBrojNaDeset(out int x)
         {
             x = 10;
         }
@@ -13,7 +12,7 @@ namespace Vsite.CSharp
         public static void PozivInicijalizacijeOutParametrom()
         {
             int x = 0;
-            InicijalizirajBrojNaDeset(x);
+            InicijalizirajBrojNaDeset(out x);
             Console.WriteLine(string.Format("Nakon InicijalizirajBrojNaDeset: {0}", x));
         }
 
