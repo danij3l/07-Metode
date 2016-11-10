@@ -39,15 +39,13 @@ namespace ReferentniTipKaoParametar
 
         static void Main(string[] args)
         {
-            // TODO: Ispod sljedeće naredbe dodati poziv metode PromijeniOsobu s prosljeđenom osobom janko i ispisati osobu nakon poziva te metode.
             Osoba janko = new Osoba("Janko", 1);
+            PromijeniOsobu(janko);
+            Console.WriteLine(janko);
 
+            PromijeniIme(janko, "Pero");
+            Console.WriteLine(janko);
 
-            Console.WriteLine();
-
-            // TODO: Napisati poziv metode PromijeniIme s prosljeđenom osobom janko i novim imenom "Pero" i ispisati osobu nakon poziva te metode.
-
-            
             Console.WriteLine("GOTOVO!!!");
             Console.ReadKey();
         }
