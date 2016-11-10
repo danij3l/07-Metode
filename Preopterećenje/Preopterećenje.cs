@@ -4,17 +4,15 @@ namespace Vsite.CSharp
 {
     public class Preopterećenje
     {
-        // TODO: Pokrenuti program i provjeriti ispis.
         public static void MojaMetoda(double broj1, double broj2)
         {
             Console.WriteLine("MojaMetoda(double {0}, double {1})", broj1, broj2);
         }
 
-        // TODO: Napisati statičku javno datupnu preopterećenu verziju metode MojaMetoda koja prima dva argumenta: prvi tipa int, a drugi tipa double. Metoda mora ispisati "MojaMetoda(int {0}, double {1})", broj1, broj2
-
-
-        // TODO: Pokrenuti program i usporediti ispis sa prijašnjim.
-
+        public static void MojaMetoda(int broj1, double broj2)
+        {
+            Console.WriteLine("MojaMetoda(int {0}, double {1})", broj1, broj2);
+        }
 
         static void Main(string[] args)
         {
@@ -28,7 +26,7 @@ namespace Vsite.CSharp
             MojaMetoda(d1, d2);
             MojaMetoda(d1, i2);
 
-            Console.WriteLine("GOTOVO!!!");
+            Console.WriteLine("---------GOTOVO---------");
             Console.ReadKey();
         }
     }
