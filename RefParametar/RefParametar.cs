@@ -14,8 +14,7 @@ namespace Vsite.CSharp
             Console.ReadKey();
         }
 
-        // TODO: Dodati parametru metode modifikator ref tako da se argument x metodi prenosi po referenci te promijeniti poziv metode. Pokrenuti program i provjeriti ispis.
-        static void DodajDeset(int x)
+        static void DodajDeset(ref int x)
         {
             x += 10;
         }
@@ -23,7 +22,7 @@ namespace Vsite.CSharp
         public static int PozivMetodeDodajDeset(int broj)
         {
             Console.WriteLine("Prije metode DodajDeset: {0}", broj);
-            DodajDeset(broj);
+            DodajDeset(ref broj);
             Console.WriteLine("Nakon metode DodajDeset: {0}", broj);
             return broj;
         }
@@ -46,8 +45,9 @@ namespace Vsite.CSharp
             }
         }
 
-        // TODO: Dodati prvom parametru metode modifikator ref tako da se prvi argument osoba metodi prenosi po referenci te promijeniti poziv metode. Pokrenuti program i provjeriti ispis.
-        static void PromijeniOsobu(Osoba osoba, string novoIme, int noviMatičniBroj)
+        // TODO: Dodati prvom parametru metode modifikator ref tako da se prvi argument
+        // osoba metodi prenosi po referenci te promijeniti poziv metode. Pokrenuti program i provjeriti ispis.
+        static void PromijeniOsobu(ref Osoba osoba, string novoIme, int noviMatičniBroj)
         {
             osoba = new Osoba(novoIme, noviMatičniBroj);
         }
@@ -55,7 +55,7 @@ namespace Vsite.CSharp
         public static Osoba PozivMetodePromijeniOsobu(Osoba osoba, string novoIme, int noviMatičniBroj)
         {
             Console.WriteLine(string.Format("Prije metode PromijeniOsobu: {0}", osoba));
-            PromijeniOsobu(osoba, novoIme, noviMatičniBroj);
+            PromijeniOsobu(ref osoba, novoIme, noviMatičniBroj);
             Console.WriteLine(string.Format("Nakon metode PromijeniOsobu: {0}", osoba));
             return osoba;
         }
