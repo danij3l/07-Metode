@@ -4,8 +4,6 @@ namespace Vsite.CSharp
 {
     public class VrijednosniTipKaoParametar
     {
-        // TODO: Pokrenuti program i provjeriti ispis.
-
         static void Uvećaj(int n)
         {
             n += 1;
@@ -34,7 +32,7 @@ namespace Vsite.CSharp
             Console.WriteLine("U metodi PromijeniOsobu stavljam novu osobu:");
             o = new Osoba("Pero", 2);
             Console.WriteLine(o);
-            Console.WriteLine("Nakon povratka iz ,etode PromijeniOsobu:");
+            Console.WriteLine("Nakon povratka iz Metode PromijeniOsobu:");
         }
 
         public static void PromijeniIme(Osoba o, string novoIme)
@@ -57,17 +55,14 @@ namespace Vsite.CSharp
 
             Console.WriteLine();
 
-            // TODO: Ispod sljedeće naredbe dodati poziv metode PromijeniOsobu s prosljeđenom osobom janko i ispisati osobu nakon poziva te metode.
             Osoba janko = new Osoba("Janko", 1);
+            PromijeniOsobu(janko);
+            Console.WriteLine(janko);
 
+            PromijeniIme(janko, "Pero");
+            Console.WriteLine(janko);
 
-            Console.WriteLine();
-
-            // TODO: Napisati poziv metode PromijeniIme s prosljeđenom osobom janko i novim imenom "Pero" i ispisati osobu nakon poziva te metode.
-            
-
-
-            Console.WriteLine("GOTOVO!!!");
+            Console.WriteLine("----------GOTOVO----------");
             Console.ReadKey();
         }
     }
