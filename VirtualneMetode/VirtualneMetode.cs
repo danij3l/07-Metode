@@ -17,10 +17,29 @@ namespace Vsite.CSharp
 
     class Izvedena1 : Bazna
     {
+        public new void IspišiImeObično()
+        {
+            Console.WriteLine("Izvedena1 Obično");
+        }
+
+        public override void IspišiImeVirtualno()
+        {
+            Console.WriteLine("Izvedena1 Virtualno");
+        }
     }
 
     class Izvedena2 : Bazna
     {
+        public new void IspišiImeObično()
+        {
+            Console.WriteLine("Izvedena2 Obično");
+        }
+
+        public override void IspišiImeVirtualno()
+        {
+            Console.WriteLine("Izvedena2 Virtualno");
+        }
+
     }
 
     public class VirtualneMetode
@@ -66,17 +85,12 @@ namespace Vsite.CSharp
 
         static void Main(string[] args)
         {
-            // TODO: Pokrenite program i provjerite što će se ispisati.
-
-            // TODO: U klase Izvedena1 i Izvedena2 dodajte javno dostupne metode IspišiImeObično koje će ispisati "Izvedena1 Obično", odnosno "Izvedena2 Obično". Pokrenite program i usporedite ispise s prijašnjima.
 
             Console.WriteLine("Zasebni pozivi nevirtualnih metoda:");
             ZasebniPoziviNevirtualnihMetoda();
 
             Console.WriteLine("Pozivi nevirtualnih metoda na kolekciji baznih objekata:");
             PoziviNevirtualnihMetodaNaKolekcijiBaznogTipa();
-
-            // TODO: U klase Izvedena1 i Izvedena2 dodajte javno dostupne metode IspišiImeVirtualno koje će ispisati "Izvedena1 Virtualno", odnosno "Izvedena2 Virtualno". Pokrenite program i usporedite ispise s prijašnjima.
 
             Console.WriteLine("Zasebni pozivi virtualnih metoda:");
             ZasebniPoziviVirtualnihMetoda();
